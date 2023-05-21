@@ -77,7 +77,8 @@ void main() {
 
   //Restringir el tipo de variable de una lista
   List<int> Nuevalista = [1, 2, 3, 4, 5];
-  print("Nueva lista con restriccion de solo elementos numericos: $Nuevalista");
+  print(
+      "Nueva lista con restriccion de solo elementos numericos: $Nuevalista \n");
   //No debería permitir agregar este elemento a la lista
   //nuevoarray.add("Hola");
   //print(nuevoarray);
@@ -104,9 +105,25 @@ void main() {
   print("COLOCANDO EN DUDA LA MUTABILIDAD DE FINAL");
   print(z); //imprime el array [1,2,3,4] , valor asignado inicialmente.
   z.add(5); //Hacemos uso del método para agregar valor al array
-  print(z);
+  print("$z\n");
 
   //Ahora probabamos la mutabilidad de Const
   //const date = new DateTime.now();
   //print("La fecha actual es: $date");
+
+  //Sets
+  /*La diferencia con las listas es que no admite valores duplicados y los valores
+  se establecen con {}*/
+
+  Set<String> colores = {"Rojo", "Azul"};
+  //colores.add("Azul") Como se esta añadiendo un elemento ya existente, lo ingora sin dar error
+  print("SETS");
+  print("$colores\n");
+
+  //Maps
+  //Es una estructura de datos que almacenan la informacion ordenada en clave-valor.
+
+  Map<String, String> colors = {"AZUL": "azul", "ROJO": "rojo"};
+  print("MAPS");
+  print(colors["ROJO"]);
 }
