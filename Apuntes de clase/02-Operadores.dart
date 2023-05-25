@@ -1,4 +1,15 @@
 void main() {
+  var op1 = operacion(10, 20, suma);
+  var op2 = operacion(10, 20, resta);
+  print(op1);
+  print(op2);
+}
+
+int operacion(int a, int b, Function func) => func(a, b);
+int suma(int a, int b) => a + b;
+int resta(int a, int b) => a - b;
+
+
   /*OPERADORES ATIRMETICOS(operaciones basicas)
   int suma = 10 + 5;
   int resta = 20 - 10;
@@ -40,4 +51,5 @@ void main() {
   is (Para saber si es de un tipo)
   is! (Para saber si no es de un tipo)
   */
-}
+
+
